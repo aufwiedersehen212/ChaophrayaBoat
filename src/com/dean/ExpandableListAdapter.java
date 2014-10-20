@@ -99,6 +99,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 	public void onGroupExpanded(int groupPosition) {
 		if (groupPosition != lastExpandedGroupPosition) {
 			listView.collapseGroup(lastExpandedGroupPosition);
+			listView.setSelection(groupPosition);
 		}
 		super.onGroupExpanded(groupPosition);
 		lastExpandedGroupPosition = groupPosition;

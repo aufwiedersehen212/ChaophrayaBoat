@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ChaophayaBoat</string>
+    <string name="headline">Chao Phraya Express Boat</string>
+    <string name="action_settings">Settings</string>
+    <string name="route">Route</string>
+    <string name="map">Map</string>
+    <string name="map_description">Map description</string>
+    <string name="transportation">Transportation</string>
+    <string name="place">Place</string>
+
+    <string-array name="start_array">
+        <item>เริ่มต้น</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="destination_array">
+        <item>ปลายทาง</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+    </string-array>
+
+    <string name="title_activity_route_result">RouteResultActivity</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>

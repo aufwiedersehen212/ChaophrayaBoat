@@ -4,9 +4,9 @@
     "name_th": "ปากเกร็ด",
     "name_en": "Pakkret",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [32,505] ",
-      "รถตู้ Van private service",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา \nRegular bus\n[32,505] ",
+      "รถตู้\n Van private service",
+      "มอเตอร์ไซค์รับจ้าง\n Motorcycle"
     ],
     "flags": [
       {
@@ -23,7 +23,7 @@
     "name_th": "วัดกลางเกร็ด ",
     "name_en": "Wat Klongkret",
     "other_transportations": [
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "มอเตอร์ไซค์รับจ้าง\n Motorcycle"
     ],
     "flags": [
       {
@@ -40,7 +40,7 @@
     "name_th": "กระทรวงพาณิชย์",
     "name_en": "Ministry of Commerce",
     "other_transportations": [
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "มอเตอร์ไซค์รับจ้าง\n Motorcycle"
     ],
     "flags": [
       {
@@ -57,9 +57,9 @@
     "name_th": "นนทบุรี",
     "name_en": "Nonthaburi",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [30,32,33,63,64,65,90,97,114,117,175,203] ",
-      "รถประจำทางปรับอากาศ Air cond bus [506,545]",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา \nRegular bus \n[30,32,33,63,64,65,90,97,114,117,175,203] ",
+      "รถประจำทางปรับอากาศ \nAir cond bus\n[506,545]",
+      "มอเตอร์ไซค์รับจ้าง \nMotorcycle"
     ],
     "flags": [
       {
@@ -90,8 +90,8 @@
     "name_th": "พระราม5 ",
     "name_en": "Rama5 Bridge",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [32,33,63,64,65,90,97,117] ",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา\n Regular bus\n [32,33,63,64,65,90,97,117] ",
+      "มอเตอร์ไซค์รับจ้าง\n Motorcycle"
     ],
     "flags": [
       {
@@ -108,10 +108,10 @@
     "name_th": "พิบูลย์สงคราม2 ",
     "name_en": "Pibul2",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [32,33,63,64,65,90,97,117,175,203] ",
-      "รถประจำทางปรับอากาศ Air cond bus [506]",
-      "รถประจำทางปรับอากาศพิเศษ Air cond bus (special) [15]",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา \nRegular bus\n [32,33,63,64,65,90,97,117,175,203] ",
+      "รถประจำทางปรับอากาศ\n Air cond bus\n [506]",
+      "รถประจำทางปรับอากาศพิเศษ \nAir cond bus (special)\n [15]",
+      "มอเตอร์ไซค์รับจ้าง\n Motorcycle"
     ],
     "flags": [
       {
@@ -145,7 +145,7 @@
     "name_th": "วัดตึก  ",
     "name_en": "Wat Tuek",
     "other_transportations": [
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "มอเตอร์ไซค์รับจ้าง\n Motorcycle"
     ],
     "flags": [
       {
@@ -162,11 +162,11 @@
     "name_th": "วัดเขมา  ",
     "name_en": "Wat Khema",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [ 32,33,63,64,65,90,97,117,175,203] ",
-      "รถประจำทางปรับอากาศ Air cond bus [506,543]",
-      "รถประจำทางปรับอากาศพิเศษ Air cond bus (special)[15]",
-      "รถตู้ Van private service",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา\n Regular bus\n [ 32,33,63,64,65,90,97,117,175,203] ",
+      "รถประจำทางปรับอากาศ\n Air cond bus\n [506,543]",
+      "รถประจำทางปรับอากาศพิเศษ\n Air cond bus (special)\n[15]",
+      "รถตู้ \nVan private service",
+      "มอเตอร์ไซค์รับจ้าง\n Motorcycle"
     ],
     "flags": [
       {
@@ -183,11 +183,11 @@
     "name_th": "พิบูลย์สงคราม1  ",
     "name_en": "Pibul1",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [32,33,63,64,65,90,97,117,175,203] ",
-      "รถประจำทางปรับอากาศ Air cond bus [506,543]",
-      "รถประจำทางปรับอากาศพิเศษ Air cond bus (special)[15]",
-      "รถตู้ Van private service",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา\nRegular bus\n [32,33,63,64,65,90,97,117,175,203] ",
+      "รถประจำทางปรับอากาศ\n Air cond bus\n [506,543]",
+      "รถประจำทางปรับอากาศพิเศษ\n Air cond bus (special)\n[15]",
+      "รถตู้\n Van private service",
+      "มอเตอร์ไซค์รับจ้าง\n Motorcycle"
     ],
     "flags": [
       {
@@ -204,9 +204,9 @@
     "name_th": "พระราม7  ",
     "name_en": "Rama7 Bridge",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [18,49,50,110] ",
-      "รถประจำทางปรับอากาศพิเศษ Air cond bus (special)[15]",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา\n Regular bus\n [18,49,50,110] ",
+      "รถประจำทางปรับอากาศพิเศษ\n Air cond bus (special)\n[15]",
+      "มอเตอร์ไซค์รับจ้าง\n Motorcycle"
     ],
     "flags": [
       {
@@ -237,9 +237,9 @@
     "name_th": "วัดสร้อยทอง   ",
     "name_en": "Wat Soi Thong",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [5,32,33,49,64,90,117] ",
-      "รถประจำทางปรับอากาศ Air cond bus [506]",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา\n Regular bus\n [5,32,33,49,64,90,117] ",
+      "รถประจำทางปรับอากาศ\n Air cond bus\n [506]",
+      "มอเตอร์ไซค์รับจ้าง\n Motorcycle"
     ],
     "flags": [
       {
@@ -254,11 +254,11 @@
   {
     "id": "N22",
     "name_th": "บางโพ  ",
-    "name_en": "Wat Soi Thong",
+    "name_en": "BangPo",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [5,32,33,49,64,90,117] ",
-      "รถประจำทางปรับอากาศ Air cond bus [506]",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา \nRegular bus\n [5,32,33,49,64,90,117] ",
+      "รถประจำทางปรับอากาศ\n Air cond bus\n [506]",
+      "มอเตอร์ไซค์รับจ้าง\n Motorcycle"
     ],
     "flags": [
       {
@@ -275,10 +275,10 @@
     "name_th": "เกียกกาย ",
     "name_en": "Kiak Kia",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [3,16,64,65,66,90,117] ",
-      "รถประจำทางปรับอากาศ Air cond bus [505]",
-      "รถตู้ Van private service",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา \nRegular bus\n [3,16,64,65,66,90,117] ",
+      "รถประจำทางปรับอากาศ \nAir cond bus\n [505]",
+      "รถตู้\n Van private service",
+      "มอเตอร์ไซค์รับจ้าง \nMotorcycle"
     ],
     "flags": [
       {
@@ -300,10 +300,10 @@
     "name_th": "เขียวไข่กา ",
     "name_en": "Kheaw Khia Ka",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [3,16,30,32,33,49,64,65,66,90,117] ",
-      "รถประจำทางปรับอากาศ Air cond bus [505,506]",
-      "รถตู้ Van private service",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา\n Regular bus\n [3,16,30,32,33,49,64,65,66,90,117] ",
+      "รถประจำทางปรับอากาศ\n Air cond bus\n [505,506]",
+      "รถตู้\n Van private service",
+      "มอเตอร์ไซค์รับจ้าง \nMotorcycle"
     ],
     "flags": [
       {
@@ -320,10 +320,10 @@
     "name_th": "กรมชลประทาน ",
     "name_en": "Irrigation Dept",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [3,16,30,32,33,49,64,65,66] ",
-      "รถประจำทางปรับอากาศ Air cond bus [505,506]",
-      "รถตู้ Van private service",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา\n Regular bus\n [3,16,30,32,33,49,64,65,66] ",
+      "รถประจำทางปรับอากาศ\n Air cond bus\n [505,506]",
+      "รถตู้\n Van private service",
+      "มอเตอร์ไซค์รับจ้าง\n Motorcycle"
     ],
     "flags": [
       {
@@ -341,10 +341,10 @@
     "name_th": "พายัพ   ",
     "name_en": "Payap",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [3,16,64,65,66,90,117] ",
-      "รถประจำทางปรับอากาศ Air cond bus [505,506]",
-      "รถตู้ Van private service",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา\n Regular bus\n [3,16,64,65,66,90,117] ",
+      "รถประจำทางปรับอากาศ\n Air cond bus\n [505,506]",
+      "รถตู้\n Van private service",
+      "มอเตอร์ไซค์รับจ้าง\n Motorcycle"
     ],
     "flags": [
       {
@@ -365,7 +365,7 @@
     "name_th": "วัดเทพากร  ",
     "name_en": "Wat Thepakorn",
     "other_transportations": [
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "มอเตอร์ไซค์รับจ้าง\n Motorcycle"
     ],
     "flags": [
       {
@@ -382,8 +382,8 @@
     "name_th": "วัดเทพนารี ",
     "name_en": "Wat Thepnahree",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [18,175,203] ",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา\n Regular bus\n [18,175,203] ",
+      "มอเตอร์ไซค์รับจ้าง\n Motorcycle"
     ],
     "flags": [
       {
@@ -400,10 +400,10 @@
     "name_th": "สะพานกรุงธน (ซังฮี้) ",
     "name_en": "Krung Thon Bridge (Sung Hi)",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [18,28,56,66,108,110,125,164] ",
-      "รถประจำทางปรับอากาศ Air cond bus [510,515]",
-      "รถประจำทางปรับอากาศพิเศษ Air cond bus (special) [4]",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา\n Regular bus\n [18,28,56,66,108,110,125,164] ",
+      "รถประจำทางปรับอากาศ \nAir cond bus\n [510,515]",
+      "รถประจำทางปรับอากาศพิเศษ \nAir cond bus (special)\n [4]",
+      "มอเตอร์ไซค์รับจ้าง\n Motorcycle"
     ],
     "flags": [
       {
@@ -429,10 +429,10 @@
     "name_th": "เทเวศร์   ",
     "name_en": "Thewet",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [3,9,19,30,32,33,43,49,53,64,65] ",
-      "รถประจำทางปรับอากาศ Air cond bus [32,64,506,524]",
-      "รถตู้ Van private service",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา\nRegular bus\n [3,9,19,30,32,33,43,49,53,64,65] ",
+      "รถประจำทางปรับอากาศ\n Air cond bus\n [32,64,506,524]",
+      "รถตู้ \nVan private service",
+      "มอเตอร์ไซค์รับจ้าง\n Motorcycle"
     ],
     "flags": [
       {
@@ -465,10 +465,10 @@
     "name_th": "พระราม8  ",
     "name_en": "Ram8 Bridge",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [3,9,19,30,32,33,43,49,53,64,65] ",
-      "รถประจำทางปรับอากาศ Air cond bus [ 32,64,506,524]",
-      "รถตู้ Van private service ",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา\n Regular bus\n [3,9,19,30,32,33,43,49,53,64,65] ",
+      "รถประจำทางปรับอากาศ\n Air cond bus\n [ 32,64,506,524]",
+      "รถตู้\n Van private service ",
+      "มอเตอร์ไซค์รับจ้าง\n Motorcycle"
     ],
     "flags": [
       {
@@ -486,8 +486,8 @@
     "name_th": "พระอาทิตย์",
     "name_en": "Phra Arthit",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [3,6,15,43,82] ",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา \nRegular bus\n [3,6,15,43,82] ",
+      "มอเตอร์ไซค์รับจ้าง\n Motorcycle"
     ],
     "flags": [
       {
@@ -516,10 +516,10 @@
     "name_th": "พระปิ่นเกล้า ",
     "name_en": "Phra Pin Klao Bridge",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [19,30,42,57,68,79,80,123,124,127,165,169,201,203] ",
-      "รถประจำทางปรับอากาศ Air cond bus [170,171,174,183,503,507,509,511,516]",
-      "รถประจำทางปรับอากาศพิเศษ Air cond bus (special) [10] ",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา \nRegular bus \n[19,30,42,57,68,79,80,123,124,127,165,169,201,203] ",
+      "รถประจำทางปรับอากาศ \nAir cond bus\n [170,171,174,183,503,507,509,511,516]",
+      "รถประจำทางปรับอากาศพิเศษ \nAir cond bus (special)\n [10] ",
+      "มอเตอร์ไซค์รับจ้าง\n Motorcycle"
     ],
     "flags": [
       {
@@ -550,8 +550,8 @@
     "name_th": "ท่ารถไฟ ",
     "name_en": "Thonburi Railway",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [19,56,57,91,149,157] ",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา\nRegular bus\n [19,56,57,91,149,157] ",
+      "มอเตอร์ไซค์รับจ้าง\n Motorcycle"
     ],
     "flags": [
       {
@@ -568,8 +568,8 @@
     "name_th": "วังหลัง (พรานนก)",
     "name_en": "Wang Lang (Prannok)",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [19,57,91,149,157] ",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา\n Regular bus\n [19,57,91,149,157] ",
+      "มอเตอร์ไซค์รับจ้าง \nMotorcycle"
     ],
     "flags": [
       {
@@ -604,7 +604,7 @@
     "name_th": "มหาราช ",
     "name_en": "Maharaj",
     "other_transportations": [
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "มอเตอร์ไซค์รับจ้าง\n Motorcycle"
     ],
     "flags": [
       {
@@ -621,10 +621,10 @@
     "name_th": "ท่าช้าง ",
     "name_en": "Tha Chang",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [1,25,32,44,47,53,82,91,123,124] ",
-      "รถประจำทางปรับอากาศ Air cond bus  [501,508,512]",
-      "รถตู้ Van private service",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา\n Regular bus\n [1,25,32,44,47,53,82,91,123,124] ",
+      "รถประจำทางปรับอากาศ\n Air cond bus \n [501,508,512]",
+      "รถตู้ \nVan private service",
+      "มอเตอร์ไซค์รับจ้าง \nMotorcycle"
     ],
     "flags": [
       {
@@ -651,10 +651,10 @@
     "name_th": "ท่าเตียน ",
     "name_en": "Tha Tien",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [1,25,32,44,48,53] ",
-      "รถประจำทางปรับอากาศ Air cond bus  [508,512]",
-      "รถตู้ Van private service",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา\n Regular bus\n [1,25,32,44,48,53] ",
+      "รถประจำทางปรับอากาศ\n Air cond bus\n  [508,512]",
+      "รถตู้\n Van private service",
+      "มอเตอร์ไซค์รับจ้าง\n Motorcycle"
     ],
     "flags": [
       {
@@ -683,8 +683,8 @@
     "name_th": "ราชินี ",
     "name_en": "Rajinee",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [7ก,8,12,42,43,73ก82] ",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา\n Regular bus\n [7ก,8,12,42,43,73ก82] ",
+      "มอเตอร์ไซค์รับจ้าง \nMotorcycle"
     ],
     "flags": [
       {
@@ -703,8 +703,8 @@
     "name_th": "สะพานพุทธ ",
     "name_en": "Mamorial Bridge",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [7ก,8,12,42,43,73,73ก82] ",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา\n Regular bus\n [7ก,8,12,42,43,73,73ก82] ",
+      "มอเตอร์ไซค์รับจ้าง\n Motorcycle"
     ],
     "flags": [
       {
@@ -731,9 +731,9 @@
     "name_th": "ราชวงศ์   ",
     "name_en": "Rachawongse",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [204] ",
-      "รถประจำทางปรับอากาศ Air cond bus  [204]",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา\n Regular bus\n [204] ",
+      "รถประจำทางปรับอากาศ \nAir cond bus\n  [204]",
+      "มอเตอร์ไซค์รับจ้าง\n Motorcycle"
     ],
     "flags": [
       {
@@ -771,8 +771,8 @@
     "name_th": "กรมเจ้าท่า   ",
     "name_en": "Marine Dept",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [1,35,75] ",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา \nRegular bus\n [1,35,75] ",
+      "มอเตอร์ไซค์รับจ้าง\n Motorcycle"
     ],
     "flags": [
       {
@@ -795,10 +795,10 @@
     "name_th": "สี่พระยา   ",
     "name_en": "Si Phraya",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [1,16,35,36,45,75,93] ",
-      "รถประจำทางปรับอากาศพิเศษ Air cond bus (special) [6]",
-      "รถตู้ Van private service",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา \nRegular bus\n [1,16,35,36,45,75,93] ",
+      "รถประจำทางปรับอากาศพิเศษ\n Air cond bus (special)\n [6]",
+      "รถตู้ \nVan private service",
+      "มอเตอร์ไซค์รับจ้าง \nMotorcycle"
     ],
     "flags": [
       {
@@ -835,10 +835,10 @@
     "name_th": "วัดม่วงแค ",
     "name_en": "Wat Muang Kae",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [1,16,35,36,45,75,93] ",
-      "รถประจำทางปรับอากาศพิเศษ Air cond bus (special) [6]",
-      "รถตู้ Van private service",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา\n Regular bus\n [1,16,35,36,45,75,93] ",
+      "รถประจำทางปรับอากาศพิเศษ \nAir cond bus (special)\n [6]",
+      "รถตู้ \nVan private service",
+      "มอเตอร์ไซค์รับจ้าง\n Motorcycle"
     ],
     "flags": [
       {
@@ -857,8 +857,8 @@
     "name_th": "โอเรียนเท็ล    ",
     "name_en": "Oriental",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [1,35,75] ",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา\nRegular bus\n [1,35,75] ",
+      "มอเตอร์ไซค์รับจ้าง\nMotorcycle"
     ],
     "flags": [
       {
@@ -885,9 +885,9 @@
     "name_th": "สาทร (ตากสิน)  ",
     "name_en": "Sathorn (Taksin)",
     "other_transportations": [
-      "รถประจำทางธรรมดา\nRegular bus [1,15,17,35,75,115,116,163] ",
-      "รถประจำทางปรับอากาศ\nAir cond bus  [ 504]",
-      "รถประจำทางปรับอากาศพิเศษ\nAir cond bus (special) [ 20 ]",
+      "รถประจำทางธรรมดา\nRegular bus\n [1,15,17,35,75,115,116,163] ",
+      "รถประจำทางปรับอากาศ\nAir cond bus\n  [ 504]",
+      "รถประจำทางปรับอากาศพิเศษ\nAir cond bus (special)\n [ 20 ]",
       "มอเตอร์ไซค์รับจ้าง\nMotorcycle",
       "รถไฟฟ้า สะพานตากสิน\nBTS"
     ],
@@ -929,8 +929,8 @@
     "name_th": "วัดเศวตฉัตร  ",
     "name_en": "Wat Sawatachat",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [3,89,111] ",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา\n Regular bus\n [3,89,111] ",
+      "มอเตอร์ไซค์รับจ้าง\n Motorcycle"
     ],
     "flags": [
       {
@@ -947,11 +947,11 @@
     "name_th": "วัดวรจรรยาวาส  ",
     "name_en": "Wat Worachanyawas",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [1,15,17,22,75,163] ",
-      "รถประจำทางปรับอากาศ Air cond bus  [504] ",
-      "รถประจำทางปรับอากาศพิเศษ Air cond bus (special)   [20] ",
-      "รถตู้ Van private service",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา\n Regular bus\n [1,15,17,22,75,163] ",
+      "รถประจำทางปรับอากาศ\n Air cond bus\n  [504] ",
+      "รถประจำทางปรับอากาศพิเศษ\n Air cond bus (special)\n   [20] ",
+      "รถตู้ \nVan private service",
+      "มอเตอร์ไซค์รับจ้าง\n Motorcycle"
     ],
     "flags": [
       {
@@ -972,11 +972,11 @@
     "name_th": "วัดราชสิงขร  ",
     "name_en": "Wat Rajsingkorn",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [1,15,17,22,75,163] ",
-      "รถประจำทางปรับอากาศ Air cond bus  [504] ",
-      "รถประจำทางปรับอากาศพิเศษ Air cond bus (special)   [20] ",
-      "รถตู้ Van private service",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา\n Regular bus\n [1,15,17,22,75,163] ",
+      "รถประจำทางปรับอากาศ\n Air cond bus\n  [504] ",
+      "รถประจำทางปรับอากาศพิเศษ\n Air cond bus (special)\n  [20] ",
+      "รถตู้ \nVan private service",
+      "มอเตอร์ไซค์รับจ้าง\n Motorcycle"
     ],
     "flags": [
       {
@@ -998,8 +998,8 @@
     "name_th": "ราษฎร์บูรณะ   ",
     "name_en": "Ratburana",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [6,17,88] ",
-      "มอเตอร์ไซค์รับจ้าง Motorcycle"
+      "รถประจำทางธรรมดา \nRegular bus\n [6,17,88] ",
+      "มอเตอร์ไซค์รับจ้าง\n Motorcycle"
     ],
     "flags": [
       {

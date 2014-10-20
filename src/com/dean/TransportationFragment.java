@@ -10,9 +10,20 @@ import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 
 public class TransportationFragment extends Fragment {
+	@SuppressWarnings("unused")
 	private static final String TAG = "TransportationFragment";
 	private ExpandableListView expandableListView;
 	private ExpandableListAdapter adapter;
+
+	public void onResume() {
+		super.onResume();
+		if (expandableListView != null) {
+			expandableListView.setSelection(0);
+			int count = adapter.getGroupCount();
+			for (int i = 0; i < count; i++)
+				expandableListView.collapseGroup(i);
+		}
+	}
 
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View rootView = inflater.inflate(R.layout.fragment_transportation, container, false);

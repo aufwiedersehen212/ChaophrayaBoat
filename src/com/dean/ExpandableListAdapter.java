@@ -17,15 +17,11 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 	private Context _context;
 	private List<Quay> quaysList;
 	private ExpandableListView listView;
-	// private List<String> _listDataHeader;
-	// private HashMap<String, List<String>> _listDataChild;
 	private int lastExpandedGroupPosition;
 
 	public ExpandableListAdapter(Context context, List<String> listDataHeader,
 			HashMap<String, List<String>> listChildData) {
 		this._context = context;
-		// this._listDataHeader = listDataHeader;
-		// this._listDataChild = listChildData;
 	}
 
 	public ExpandableListAdapter(Context context, ExpandableListView listView, List<Quay> quaysList) {
@@ -37,8 +33,6 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 	@Override
 	public Object getChild(int groupPosition, int childPosititon) {
 		return this.quaysList.get(groupPosition).otherTransportations.get(childPosititon);
-		// return
-		// this._listDataChild.get(this._listDataHeader.get(groupPosition)).get(childPosititon);
 	}
 
 	@Override
@@ -57,7 +51,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 			convertView = infalInflater.inflate(R.layout.list_item, null);
 		}
 
-		TextView txtListChild = (TextView) convertView.findViewById(R.id.lblListItem);
+		TextView txtListChild = (TextView) convertView.findViewById(R.id.child_item);
 
 		txtListChild.setText(childText);
 		return convertView;
@@ -66,19 +60,15 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 	@Override
 	public int getChildrenCount(int groupPosition) {
 		return this.quaysList.get(groupPosition).otherTransportations.size();
-		// return
-		// this._listDataChild.get(this._listDataHeader.get(groupPosition)).size();
 	}
 
 	@Override
 	public Object getGroup(int groupPosition) {
 		return this.quaysList.get(groupPosition);
-		// return this._listDataHeader.get(groupPosition);
 	}
 	@Override
 	public int getGroupCount() {
 		return this.quaysList.size();
-		// return this._listDataHeader.size();
 	}
 
 	@Override
@@ -107,8 +97,6 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
 	@Override
 	public void onGroupExpanded(int groupPosition) {
-		// collapse the old expanded group, if not the same
-		// as new group to expand
 		if (groupPosition != lastExpandedGroupPosition) {
 			listView.collapseGroup(lastExpandedGroupPosition);
 		}

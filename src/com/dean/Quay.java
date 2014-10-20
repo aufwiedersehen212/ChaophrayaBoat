@@ -2,7 +2,7 @@ package com.dean;
 
 import java.util.List;
 
-public class Boat {
+public class Quay {
 	public String id;
 	public String nameTh;
 	public String nameEn;

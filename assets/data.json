@@ -253,7 +253,7 @@
   },
   {
     "id": "N22",
-    "name_th": "วัดสร้อยทอง   ",
+    "name_th": "บางโพ  ",
     "name_en": "Wat Soi Thong",
     "other_transportations": [
       "รถประจำทางธรรมดา Regular bus [5,32,33,49,64,90,117] ",
@@ -882,11 +882,11 @@
   },
   {
     "id": "C",
-    "name_th": "าทร (ตากสิน)  ",
+    "name_th": "สาทร (ตากสิน)  ",
     "name_en": "Sathorn (Taksin)",
     "other_transportations": [
-      "รถประจำทางธรรมดา Regular bus [1,15,17,35,75,115,116,163] ",
-      "รถประจำทางปรับอากาศ Air cond bus  [ 504]",
+      "รถประจำทางธรรมดา \nRegular bus [1,15,17,35,75,115,116,163] ",
+      "รถประจำทางปรับอากาศ \nAir cond bus  [ 504]",
       "รถประจำทางปรับอากาศพิเศษ Air cond bus (special) [ 20 ]",
       "มอเตอร์ไซค์รับจ้าง Motorcycle",
       "รถไฟฟ้า สะพานตากสิน BTS"

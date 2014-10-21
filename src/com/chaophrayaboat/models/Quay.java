@@ -1,4 +1,4 @@
-package com.dean;
+package com.chaophrayaboat.models;
 
 import java.util.List;
 
@@ -13,6 +13,14 @@ public class Quay {
 	class Flag {
 		public String flag;
 		public String fee;
+	}
+
+	public String getEnglishNameWithId() {
+		return String.format("%s - %s", id, nameEn);
+	}
+
+	public String getThaiNameWithId() {
+		return String.format("%s - %s", id, nameTh);
 	}
 
 }

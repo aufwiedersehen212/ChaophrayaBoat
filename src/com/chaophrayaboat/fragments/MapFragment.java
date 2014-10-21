@@ -1,4 +1,4 @@
-package com.dean;
+package com.chaophrayaboat.fragments;
 
 import uk.co.senab.photoview.PhotoViewAttacher;
 import android.os.Bundle;
@@ -8,15 +8,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.chaophrayaboat.R;
+
 public class MapFragment extends Fragment {
 
 	ImageView mapImageView;
 	PhotoViewAttacher mAttacher;
 
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState) {
-		View rootView = inflater.inflate(R.layout.fragment_map, container,
-				false);
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		View rootView = inflater.inflate(R.layout.fragment_map, container, false);
 
 		mapImageView = (ImageView) rootView.findViewById(R.id.map_image);
 		mAttacher = new PhotoViewAttacher(mapImageView);

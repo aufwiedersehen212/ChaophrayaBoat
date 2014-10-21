@@ -1,4 +1,4 @@
-package com.dean;
+package com.chaophrayaboat.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,9 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+
+import com.chaophrayaboat.R;
+import com.chaophrayaboat.fragments.RouteFragment;
 
 public class RouteResultActivity extends ActionBarActivity {
 
@@ -22,8 +25,7 @@ public class RouteResultActivity extends ActionBarActivity {
 		Intent intent = getIntent();
 
 		startTextView.setText(intent.getStringExtra(RouteFragment.EXTRA_START));
-		destinationTextView.setText(intent
-				.getStringExtra(RouteFragment.EXTRA_DESTINATION));
+		destinationTextView.setText(intent.getStringExtra(RouteFragment.EXTRA_DESTINATION));
 	}
 
 	@Override

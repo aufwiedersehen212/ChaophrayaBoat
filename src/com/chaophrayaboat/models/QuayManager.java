@@ -1,4 +1,4 @@
-package com.dean;
+package com.chaophrayaboat.models;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -22,6 +22,17 @@ public class QuayManager {
 		return quays;
 	}
 
+	public static List<String> getQuayNamesWithId(Context context, String spinnerText) {
+		List<String> names = new ArrayList<String>();
+		if (spinnerText != null) {
+			names.add(spinnerText);
+		}
+		List<Quay> qys = getQuaysList(context);
+		for (Quay q : qys) {
+			names.add(String.format("%s - %s", q.id, q.nameEn));
+		}
+		return names;
+	}
 	public static Quay[] getQuays(Context context) {
 		Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES).create();
 		return (gson).fromJson(loadJSONFromAsset(context), Quay[].class);

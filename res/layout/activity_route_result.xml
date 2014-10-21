@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.dean.RouteResultActivity" >
+    tools:context="com.chaophrayaboat.activities.RouteResultActivity" >
 
     <TextView
         android:id="@+id/start_textview"

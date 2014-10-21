@@ -1,4 +1,4 @@
-package com.dean;
+package com.chaophrayaboat.activities;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,6 +10,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.chaophrayaboat.R;
+import com.chaophrayaboat.fragments.MapFragment;
+import com.chaophrayaboat.fragments.PlaceFragment;
+import com.chaophrayaboat.fragments.RouteFragment;
+import com.chaophrayaboat.fragments.TransportationFragment;
+
 public class MainActivity extends ActionBarActivity {
 
 	@Override
@@ -17,8 +23,7 @@ public class MainActivity extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		if (savedInstanceState == null) {
-			getSupportFragmentManager().beginTransaction()
-					.add(R.id.container, new PlaceholderFragment()).commit();
+			getSupportFragmentManager().beginTransaction().add(R.id.container, new PlaceholderFragment()).commit();
 		}
 	}
 
@@ -52,30 +57,19 @@ public class MainActivity extends ActionBarActivity {
 		}
 
 		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_tabs, container,
-					false);
-			mTabHost = (FragmentTabHost) rootView
-					.findViewById(android.R.id.tabhost);
-			mTabHost.setup(getActivity(), getChildFragmentManager(),
-					android.R.id.tabcontent);
+		public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+			View rootView = inflater.inflate(R.layout.fragment_tabs, container, false);
+			mTabHost = (FragmentTabHost) rootView.findViewById(android.R.id.tabhost);
+			mTabHost.setup(getActivity(), getChildFragmentManager(), android.R.id.tabcontent);
 
-			mTabHost.addTab(
-					mTabHost.newTabSpec("route").setIndicator("Route"),
-					RouteFragment.class, null);
+			mTabHost.addTab(mTabHost.newTabSpec("route").setIndicator("Route"), RouteFragment.class, null);
 
-			mTabHost.addTab(
-					mTabHost.newTabSpec("map").setIndicator("Map"),
-					MapFragment.class, null);
-			
-			mTabHost.addTab(
-					mTabHost.newTabSpec("transportation").setIndicator("Transportation"),
+			mTabHost.addTab(mTabHost.newTabSpec("map").setIndicator("Map"), MapFragment.class, null);
+
+			mTabHost.addTab(mTabHost.newTabSpec("transportation").setIndicator("Transportation"),
 					TransportationFragment.class, null);
-			
-			mTabHost.addTab(
-					mTabHost.newTabSpec("place").setIndicator("Place"),
-					PlaceFragment.class, null);
+
+			mTabHost.addTab(mTabHost.newTabSpec("place").setIndicator("Place"), PlaceFragment.class, null);
 
 			return rootView;
 		}

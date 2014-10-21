@@ -1,8 +1,9 @@
-package com.dean;
+package com.chaophrayaboat.adapters;
 
 import java.util.HashMap;
 import java.util.List;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
@@ -11,6 +12,9 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
+
+import com.chaophrayaboat.R;
+import com.chaophrayaboat.models.Quay;
 
 public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
@@ -40,6 +44,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 		return childPosition;
 	}
 
+	@SuppressLint("InflateParams")
 	@Override
 	public View getChildView(int groupPosition, final int childPosition, boolean isLastChild, View convertView,
 			ViewGroup parent) {
@@ -76,6 +81,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 		return groupPosition;
 	}
 
+	@SuppressLint("InflateParams")
 	@Override
 	public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
 		Quay quay = (Quay) getGroup(groupPosition);

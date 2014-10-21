@@ -1,4 +1,4 @@
-package com.dean;
+package com.chaophrayaboat.fragments;
 
 import java.util.List;
 
@@ -8,6 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
+
+import com.chaophrayaboat.R;
+import com.chaophrayaboat.adapters.ExpandableListAdapter;
+import com.chaophrayaboat.models.Quay;
+import com.chaophrayaboat.models.QuayManager;
 
 public class TransportationFragment extends Fragment {
 	@SuppressWarnings("unused")

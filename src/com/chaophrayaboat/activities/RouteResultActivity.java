@@ -3,36 +3,32 @@ package com.chaophrayaboat.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.chaophrayaboat.R;
 import com.chaophrayaboat.fragments.RouteFragment;
+import com.chaophrayaboat.models.Quay;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
-import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.gson.Gson;
 
 public class RouteResultActivity extends ActionBarActivity {
 
 	private static final String TAG = "RouteResultActivity";
 
-	private MapFragment mMapFragment;
 	private GoogleMap mMap;
+	private Quay mStart;
+	private Quay mDestination;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_route_result);
-
 		setUpMapIfNeeded();
-		Log.i(TAG, mMap.toString());
-
-		// startTextView.setText(intent.getStringExtra(RouteFragment.EXTRA_START));
-		// destinationTextView.setText(intent.getStringExtra(RouteFragment.EXTRA_DESTINATION));
 	}
 
 	private void setUpMapIfNeeded() {
@@ -43,24 +39,17 @@ public class RouteResultActivity extends ActionBarActivity {
 			// Check if we were successful in obtaining the map.
 			if (mMap != null) {
 				// The Map is verified. It is now safe to manipulate the map.
-				// Construct a CameraPosition focusing on Mountain View and
-				// animate the camera to that position.
-				LatLng MOUNTAIN_VIEW = new LatLng(37.4, -122.1);
-				CameraPosition cameraPosition = new CameraPosition.Builder().target(MOUNTAIN_VIEW).zoom(17) // Sets
-																											// the
-																											// zoom
-						.bearing(90) // Sets the orientation of the camera to
-										// east
-						.tilt(30) // Sets the tilt of the camera to 30 degrees
-						.build(); // Creates a CameraPosition from the builder
-				mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
 				Intent intent = getIntent();
-				Log.i(TAG + "START ", intent.getStringExtra(RouteFragment.EXTRA_START));
-				Log.i(TAG + "DESTINATION ", intent.getStringExtra(RouteFragment.EXTRA_DESTINATION));
+				String startStr = intent.getStringExtra(RouteFragment.EXTRA_START);
+				mStart = (new Gson()).fromJson(startStr, Quay.class);
+				String destinationStr = intent.getStringExtra(RouteFragment.EXTRA_DESTINATION);
+				mDestination = (new Gson()).fromJson(destinationStr, Quay.class);
+				mMap.addMarker(new MarkerOptions().position(mStart.getLatLng()).title("Start"));
+				mMap.addMarker(new MarkerOptions().position(mDestination.getLatLng()).title("Destination"));
 
-				// mMap.addMarker(new MarkerOptions().position(new LatLng(10,
-				// 10)).title("Hello world"));
-				mMap.addMarker(new MarkerOptions().position(MOUNTAIN_VIEW).title("Hello world"));
+				CameraPosition cameraPosition = new CameraPosition.Builder().target(mStart.getLatLng()).zoom(14)
+						.bearing(90).build();
+				mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
 			}
 		}
 	}

@@ -65,8 +65,6 @@ public class RouteFragment extends Fragment implements OnClickListener {
 			public void onNothingSelected(AdapterView<?> arg0) {
 			}
 		});
-		// TODO: don't forget the header "เริ่มต้น"
-		// start = startAdapter.getItem(1);
 	}
 	private void setupDestinationSpinner() {
 		destinationSpinner = (Spinner) rootView.findViewById(R.id.destination_spinner);
@@ -89,8 +87,6 @@ public class RouteFragment extends Fragment implements OnClickListener {
 			public void onNothingSelected(AdapterView<?> arg0) {
 			}
 		});
-		// / TODO: don't forget the "ปลายทาง"
-		// destination = destinationAdapter.getItem(1);
 	}
 
 	private void setupSearchButton() {

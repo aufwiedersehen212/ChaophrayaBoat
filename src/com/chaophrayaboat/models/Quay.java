@@ -2,6 +2,8 @@ package com.chaophrayaboat.models;
 
 import java.util.List;
 
+import com.google.android.gms.maps.model.LatLng;
+
 public class Quay {
 	public String id;
 	public String nameTh;
@@ -23,6 +25,10 @@ public class Quay {
 
 	public String getThaiNameWithId() {
 		return String.format("%s - %s", id, nameTh);
+	}
+
+	public LatLng getLatLng() {
+		return new LatLng(Double.valueOf(this.lat), Double.valueOf(this.lng));
 	}
 
 }

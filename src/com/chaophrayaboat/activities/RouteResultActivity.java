@@ -55,8 +55,8 @@ public class RouteResultActivity extends ActionBarActivity {
 						.build(); // Creates a CameraPosition from the builder
 				mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
 				Intent intent = getIntent();
-				Log.i(TAG, intent.getStringExtra(RouteFragment.EXTRA_START));
-				Log.i(TAG, intent.getStringExtra(RouteFragment.EXTRA_DESTINATION));
+				Log.i(TAG + "START ", intent.getStringExtra(RouteFragment.EXTRA_START));
+				Log.i(TAG + "DESTINATION ", intent.getStringExtra(RouteFragment.EXTRA_DESTINATION));
 
 				// mMap.addMarker(new MarkerOptions().position(new LatLng(10,
 				// 10)).title("Hello world"));

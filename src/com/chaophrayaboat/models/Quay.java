@@ -19,6 +19,11 @@ public class Quay {
 		public String fee;
 	}
 
+	@Override
+	public String toString() {
+		return this.getEnglishNameWithId();
+	}
+
 	public String getEnglishNameWithId() {
 		return String.format("%s - %s", id, nameEn);
 	}
@@ -28,7 +33,7 @@ public class Quay {
 	}
 
 	public LatLng getLatLng() {
-		return new LatLng(Double.valueOf(this.lat), Double.valueOf(this.lng));
+		return new LatLng(Double.parseDouble(this.lat), Double.parseDouble(this.lng));
 	}
 
 }

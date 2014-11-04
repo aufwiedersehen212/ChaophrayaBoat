@@ -7,12 +7,15 @@ import java.util.Arrays;
 import java.util.List;
 
 import android.content.Context;
+import android.util.Log;
 
+import com.google.android.gms.maps.model.LatLng;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 public class QuayManager {
+	private static final String TAG = "QuayManager";
 	private static List<Quay> quays;
 
 	public static List<Quay> getQuaysList(Context context) {
@@ -38,6 +41,33 @@ public class QuayManager {
 		return (gson).fromJson(loadJSONFromAsset(context), Quay[].class);
 	}
 
+	public static LatLng[] getPolylinePoints(Context context, String startId, String endId) {
+		List<LatLng> lls = new ArrayList<LatLng>();
+		List<Quay> qys = getQuaysList(context);
+		int start = 0;
+		int end = 0;
+		for (int i = 0; i < qys.size(); i++) {
+			Quay q = qys.get(i);
+			if (q.id.equals(startId)) {
+				Log.i(TAG + " START", i + "");
+				start = i;
+			}
+			if (q.id.equals(endId)) {
+				Log.i(TAG + " END", i + "");
+				end = i;
+			}
+		}
+		if (start < end) {
+			for (int i = start; i <= end; i++) {
+				lls.add(qys.get(i).getLatLng());
+			}
+		} else {
+			for (int i = end; i <= start; i++) {
+				lls.add(qys.get(i).getLatLng());
+			}
+		}
+		return lls.toArray(new LatLng[0]);
+	}
 	public static String loadJSONFromAsset(Context context) {
 		String json = null;
 		try {

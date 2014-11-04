@@ -1,23 +1,26 @@
 package com.chaophrayaboat.activities;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.chaophrayaboat.R;
 import com.chaophrayaboat.fragments.RouteFragment;
 import com.chaophrayaboat.models.Quay;
+import com.chaophrayaboat.models.QuayManager;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.gson.Gson;
 
 public class RouteResultActivity extends ActionBarActivity {
-
 	private static final String TAG = "RouteResultActivity";
 
 	private GoogleMap mMap;
@@ -44,12 +47,17 @@ public class RouteResultActivity extends ActionBarActivity {
 				mStart = (new Gson()).fromJson(startStr, Quay.class);
 				String destinationStr = intent.getStringExtra(RouteFragment.EXTRA_DESTINATION);
 				mDestination = (new Gson()).fromJson(destinationStr, Quay.class);
-				mMap.addMarker(new MarkerOptions().position(mStart.getLatLng()).title("Start"));
-				mMap.addMarker(new MarkerOptions().position(mDestination.getLatLng()).title("Destination"));
-
+				mMap.addMarker(new MarkerOptions().position(mStart.getLatLng()).title(mStart.nameEn));
+				Log.i(TAG, "Start " + mStart.getLatLng());
+				mMap.addMarker(new MarkerOptions().position(mDestination.getLatLng()).title(mDestination.nameEn));
+				Log.i(TAG, "Start " + mDestination.getLatLng());
 				CameraPosition cameraPosition = new CameraPosition.Builder().target(mStart.getLatLng()).zoom(14)
 						.bearing(90).build();
 				mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+				mMap.addPolyline(new PolylineOptions()
+						.add(QuayManager.getPolylinePoints(getApplicationContext(), mStart.id, mDestination.id))
+						.width(2).color(Color.RED));
+
 			}
 		}
 	}

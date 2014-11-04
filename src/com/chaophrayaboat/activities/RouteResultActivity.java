@@ -15,6 +15,7 @@ import com.chaophrayaboat.models.QuayManager;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
@@ -47,7 +48,8 @@ public class RouteResultActivity extends ActionBarActivity {
 				mStart = (new Gson()).fromJson(startStr, Quay.class);
 				String destinationStr = intent.getStringExtra(RouteFragment.EXTRA_DESTINATION);
 				mDestination = (new Gson()).fromJson(destinationStr, Quay.class);
-				mMap.addMarker(new MarkerOptions().position(mStart.getLatLng()).title(mStart.nameEn));
+				mMap.addMarker(new MarkerOptions().position(mStart.getLatLng()).title(mStart.nameEn)
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
 				Log.i(TAG, "Start " + mStart.getLatLng());
 				mMap.addMarker(new MarkerOptions().position(mDestination.getLatLng()).title(mDestination.nameEn));
 				Log.i(TAG, "Start " + mDestination.getLatLng());
@@ -57,7 +59,6 @@ public class RouteResultActivity extends ActionBarActivity {
 				mMap.addPolyline(new PolylineOptions()
 						.add(QuayManager.getPolylinePoints(getApplicationContext(), mStart.id, mDestination.id))
 						.width(2).color(Color.RED));
-
 			}
 		}
 	}

@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.chaophrayaboat.R;
-import com.chaophrayaboat.fragments.MapFragment;
 import com.chaophrayaboat.fragments.PlaceFragment;
 import com.chaophrayaboat.fragments.RouteFragment;
 import com.chaophrayaboat.fragments.TransportationFragment;
@@ -63,8 +62,6 @@ public class MainActivity extends ActionBarActivity {
 			mTabHost.setup(getActivity(), getChildFragmentManager(), android.R.id.tabcontent);
 
 			mTabHost.addTab(mTabHost.newTabSpec("route").setIndicator("Route"), RouteFragment.class, null);
-
-			mTabHost.addTab(mTabHost.newTabSpec("map").setIndicator("Map"), MapFragment.class, null);
 
 			mTabHost.addTab(mTabHost.newTabSpec("transportation").setIndicator("Transportation"),
 					TransportationFragment.class, null);

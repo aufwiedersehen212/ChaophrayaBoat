@@ -5,27 +5,26 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 import com.chaophrayaboat.R;
-import com.chaophrayaboat.fragments.RouteFragment;
 
 public class RouteResultActivity extends ActionBarActivity {
 
-	private TextView startTextView;
-	private TextView destinationTextView;
+	// private TextView startTextView;
+	// private TextView destinationTextView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_route_result);
 
-		startTextView = (TextView) findViewById(R.id.start_textview);
-		destinationTextView = (TextView) findViewById(R.id.destination_textview);
+		// startTextView = (TextView) findViewById(R.id.start_textview);
+		// destinationTextView = (TextView)
+		// findViewById(R.id.destination_textview);
 		Intent intent = getIntent();
 
-		startTextView.setText(intent.getStringExtra(RouteFragment.EXTRA_START));
-		destinationTextView.setText(intent.getStringExtra(RouteFragment.EXTRA_DESTINATION));
+		// startTextView.setText(intent.getStringExtra(RouteFragment.EXTRA_START));
+		// destinationTextView.setText(intent.getStringExtra(RouteFragment.EXTRA_DESTINATION));
 	}
 
 	@Override

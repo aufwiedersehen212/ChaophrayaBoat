@@ -29,7 +29,6 @@ public class RouteSpinnerAdapter extends ArrayAdapter<Quay> {
 	public View getDropDownView(int position, View convertView, ViewGroup parent) {
 		return initView(position, convertView);
 	}
-
 	// for the header
 	public int getCount() {
 		return super.getCount() + 1;
@@ -47,7 +46,6 @@ public class RouteSpinnerAdapter extends ArrayAdapter<Quay> {
 			tvText2.setText("");
 			return convertView;
 		}
-
 		tvText1.setText(getItem(position - 1).getEnglishNameWithId());
 		tvText2.setText(getItem(position - 1).getThaiNameWithId());
 		return convertView;

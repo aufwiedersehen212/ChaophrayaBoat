@@ -3,6 +3,7 @@ package com.chaophrayaboat.fragments;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -17,10 +18,12 @@ import com.chaophrayaboat.activities.RouteResultActivity;
 import com.chaophrayaboat.adapters.RouteSpinnerAdapter;
 import com.chaophrayaboat.models.Quay;
 import com.chaophrayaboat.models.QuayManager;
+import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 public class RouteFragment extends Fragment implements OnClickListener {
-
+	private static final String TAG = "RouteFragment";
 	private View rootView;
 	private Spinner startSpinner;
 	private Spinner destinationSpinner;
@@ -52,6 +55,7 @@ public class RouteFragment extends Fragment implements OnClickListener {
 			public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long arg3) {
 				// TODO: don't forget the header "เริ่มต้น"
 				start = startAdapter.getItem(position + 1);
+				Log.i(TAG, start.toString());
 			}
 
 			@Override
@@ -71,6 +75,7 @@ public class RouteFragment extends Fragment implements OnClickListener {
 			public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long arg3) {
 				// / TODO: don't forget the "ปลายทาง"
 				destination = destinationAdapter.getItem(position + 1);
+				Log.i(TAG, start.toString());
 			}
 
 			@Override
@@ -98,8 +103,10 @@ public class RouteFragment extends Fragment implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		Intent intent = new Intent(getActivity(), RouteResultActivity.class);
-		String startStr = (new Gson()).toJson(start);
-		String destinationStr = (new Gson()).toJson(destination);
+		Gson gson1 = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES).create();
+		Gson gson2 = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES).create();
+		String startStr = gson1.toJson(start);
+		String destinationStr = gson2.toJson(destination);
 		intent.putExtra(EXTRA_START, startStr);
 		intent.putExtra(EXTRA_DESTINATION, destinationStr);
 		startActivity(intent);

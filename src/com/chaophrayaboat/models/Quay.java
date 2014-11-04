@@ -9,6 +9,8 @@ public class Quay {
 	public List<String> otherTransportations;
 	public List<Flag> flags;
 	public List<String> nearbyPlaces;
+	public String lat;
+	public String lng;
 
 	class Flag {
 		public String flag;

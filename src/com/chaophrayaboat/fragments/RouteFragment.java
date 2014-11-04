@@ -3,14 +3,13 @@ package com.chaophrayaboat.fragments;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
-import android.widget.ImageButton;
+import android.widget.Button;
 import android.widget.Spinner;
 
 import com.chaophrayaboat.R;
@@ -27,7 +26,7 @@ public class RouteFragment extends Fragment implements OnClickListener {
 	private View rootView;
 	private Spinner startSpinner;
 	private Spinner destinationSpinner;
-	private ImageButton searchButton;
+	private Button searchButton;
 	private RouteSpinnerAdapter startAdapter;
 	private RouteSpinnerAdapter destinationAdapter;
 
@@ -54,8 +53,12 @@ public class RouteFragment extends Fragment implements OnClickListener {
 			@Override
 			public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long arg3) {
 				// TODO: don't forget the header "เริ่มต้น"
-				start = startAdapter.getItem(position + 1);
-				Log.i(TAG, start.toString());
+				if (position > 0) {
+					start = startAdapter.getItem(position - 1);
+				} else {
+					start = null;
+				}
+				changeSearchButtonState();
 			}
 
 			@Override
@@ -63,7 +66,7 @@ public class RouteFragment extends Fragment implements OnClickListener {
 			}
 		});
 		// TODO: don't forget the header "เริ่มต้น"
-		start = startAdapter.getItem(1);
+		// start = startAdapter.getItem(1);
 	}
 	private void setupDestinationSpinner() {
 		destinationSpinner = (Spinner) rootView.findViewById(R.id.destination_spinner);
@@ -74,8 +77,12 @@ public class RouteFragment extends Fragment implements OnClickListener {
 			@Override
 			public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long arg3) {
 				// / TODO: don't forget the "ปลายทาง"
-				destination = destinationAdapter.getItem(position + 1);
-				Log.i(TAG, start.toString());
+				if (position > 0) {
+					destination = destinationAdapter.getItem(position - 1);
+				} else {
+					destination = null;
+				}
+				changeSearchButtonState();
 			}
 
 			@Override
@@ -83,12 +90,13 @@ public class RouteFragment extends Fragment implements OnClickListener {
 			}
 		});
 		// / TODO: don't forget the "ปลายทาง"
-		destination = destinationAdapter.getItem(1);
+		// destination = destinationAdapter.getItem(1);
 	}
 
 	private void setupSearchButton() {
-		searchButton = (ImageButton) rootView.findViewById(R.id.search_button);
+		searchButton = (Button) rootView.findViewById(R.id.search_button);
 		searchButton.setOnClickListener(this);
+		changeSearchButtonState();
 	}
 
 	@Override
@@ -100,13 +108,16 @@ public class RouteFragment extends Fragment implements OnClickListener {
 		}
 	}
 
+	private void changeSearchButtonState() {
+		this.searchButton.setEnabled((start != null && destination != null) && (!start.id.equals(destination.id)));
+	}
+
 	@Override
 	public void onClick(View v) {
 		Intent intent = new Intent(getActivity(), RouteResultActivity.class);
-		Gson gson1 = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES).create();
-		Gson gson2 = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES).create();
-		String startStr = gson1.toJson(start);
-		String destinationStr = gson2.toJson(destination);
+		Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES).create();
+		String startStr = gson.toJson(start);
+		String destinationStr = gson.toJson(destination);
 		intent.putExtra(EXTRA_START, startStr);
 		intent.putExtra(EXTRA_DESTINATION, destinationStr);
 		startActivity(intent);

@@ -32,6 +32,18 @@ public class Quay {
 		return String.format("%s - %s", id, nameTh);
 	}
 
+	public String getSnippet() {
+		String transporationsString = "";
+		for (String t : otherTransportations) {
+			transporationsString += t + "\n";
+		}
+		String flagsString = "";
+		for (Flag f : flags) {
+			flagsString += f.flag + " " + f.fee + "\n";
+		}
+		return String.format("%s\n%s\n%s", nameEn, transporationsString, flagsString);
+	}
+
 	public LatLng getLatLng() {
 		return new LatLng(Double.parseDouble(this.lat), Double.parseDouble(this.lng));
 	}

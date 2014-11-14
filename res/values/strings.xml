@@ -10,6 +10,7 @@
     <string name="transportation">Transportation</string>
     <string name="place">Place</string>
     <string name="search_btn">Search</string>
+    <string name="icon">icon</string>
 
     <string-array name="start_array">
         <item>เริ่มต้น</item>

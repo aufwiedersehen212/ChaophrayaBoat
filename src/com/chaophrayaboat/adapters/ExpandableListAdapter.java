@@ -24,22 +24,34 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 	private List<Quay> origQuaysList;
 	private ExpandableListView listView;
 	private int lastExpandedGroupPosition;
+	public enum Mode {
+		TRANSPORTATION, PLACE
+	}
+	private Mode mode;
 
 	public ExpandableListAdapter(Context context, List<String> listDataHeader,
 			HashMap<String, List<String>> listChildData) {
 		this._context = context;
 	}
 
-	public ExpandableListAdapter(Context context, ExpandableListView listView, List<Quay> quaysList) {
+	public ExpandableListAdapter(Context context, ExpandableListView listView, List<Quay> quaysList, Mode mode) {
 		this._context = context;
 		this.listView = listView;
 		this.quaysList = quaysList;
 		this.origQuaysList = new ArrayList<Quay>(quaysList);
+		this.mode = mode;
 	}
 
 	@Override
 	public Object getChild(int groupPosition, int childPosititon) {
-		return this.quaysList.get(groupPosition).otherTransportations.get(childPosititon);
+		switch (this.mode) {
+			case TRANSPORTATION :
+				return this.quaysList.get(groupPosition).otherTransportations.get(childPosititon);
+			case PLACE :
+				return this.quaysList.get(groupPosition).nearbyPlaces.get(childPosititon);
+			default :
+				return this.quaysList.get(groupPosition).otherTransportations.get(childPosititon);
+		}
 	}
 
 	@Override
@@ -67,7 +79,14 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
 	@Override
 	public int getChildrenCount(int groupPosition) {
-		return this.quaysList.get(groupPosition).otherTransportations.size();
+		switch (this.mode) {
+			case TRANSPORTATION :
+				return this.quaysList.get(groupPosition).otherTransportations.size();
+			case PLACE :
+				return this.quaysList.get(groupPosition).nearbyPlaces.size();
+			default :
+				return this.quaysList.get(groupPosition).otherTransportations.size();
+		}
 	}
 
 	@Override

@@ -25,6 +25,7 @@ public class TransportationFragment extends Fragment {
 	private ExpandableListAdapter adapter;
 	private SearchView search;
 
+	@Override
 	public void onResume() {
 		super.onResume();
 		if (expandableListView != null) {
@@ -51,7 +52,8 @@ public class TransportationFragment extends Fragment {
 
 	private void setupList() {
 		List<Quay> quaysList = QuayManager.getQuaysList(getActivity());
-		adapter = new ExpandableListAdapter(getActivity(), expandableListView, quaysList);
+		adapter = new ExpandableListAdapter(getActivity(), expandableListView, quaysList,
+				ExpandableListAdapter.Mode.TRANSPORTATION);
 		expandableListView.setAdapter(adapter);
 	}
 }

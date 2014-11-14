@@ -1,3 +1,12 @@
+# Basic Git's commands
+
+
+    git add .
+    git commit -m 'Commit message goes here.'
+    git pull origin master
+    git push origin master
+
+
 Android SDK Build-tools 19.1
 Download Android 4.4.2 (API 19)
 > SDK Platform

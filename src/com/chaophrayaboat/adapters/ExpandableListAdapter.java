@@ -1,5 +1,6 @@
 package com.chaophrayaboat.adapters;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -11,15 +12,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
+import android.widget.SearchView;
 import android.widget.TextView;
 
 import com.chaophrayaboat.R;
 import com.chaophrayaboat.models.Quay;
 
-public class ExpandableListAdapter extends BaseExpandableListAdapter {
+public class ExpandableListAdapter extends BaseExpandableListAdapter implements SearchView.OnQueryTextListener,
+		SearchView.OnCloseListener {
 
+	private SearchView search;
 	private Context _context;
 	private List<Quay> quaysList;
+	private List<Quay> origQuaysList;
 	private ExpandableListView listView;
 	private int lastExpandedGroupPosition;
 
@@ -32,6 +37,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 		this._context = context;
 		this.listView = listView;
 		this.quaysList = quaysList;
+		this.origQuaysList = new ArrayList<Quay>(quaysList);
 	}
 
 	@Override
@@ -119,5 +125,48 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 	@Override
 	public boolean isChildSelectable(int groupPosition, int childPosition) {
 		return true;
+	}
+
+	@SuppressLint("DefaultLocale")
+	public void filterData(String query) {
+		query = query.toLowerCase();
+		quaysList.clear();
+
+		if (query.isEmpty()) {
+			quaysList.addAll(origQuaysList);
+		} else {
+
+			for (Quay quay : origQuaysList) {
+
+				List<String> transportations = quay.otherTransportations;
+				List<String> newList = new ArrayList<String>();
+				for (String transportation : transportations) {
+					if (transportation.toLowerCase().contains(query)) {
+						newList.add(transportation);
+					}
+				}
+				if (newList.size() > 0) {
+					Quay newQuay = new Quay();
+					newQuay.otherTransportations = transportations;
+					quaysList.add(newQuay);
+				}
+			}
+		}
+		notifyDataSetChanged();
+	}
+
+	@Override
+	public boolean onClose() {
+		return false;
+	}
+
+	@Override
+	public boolean onQueryTextChange(String newText) {
+		return false;
+	}
+
+	@Override
+	public boolean onQueryTextSubmit(String query) {
+		return false;
 	}
 }

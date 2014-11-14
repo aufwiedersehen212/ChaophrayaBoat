@@ -12,16 +12,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
-import android.widget.SearchView;
 import android.widget.TextView;
 
 import com.chaophrayaboat.R;
 import com.chaophrayaboat.models.Quay;
 
-public class ExpandableListAdapter extends BaseExpandableListAdapter implements SearchView.OnQueryTextListener,
-		SearchView.OnCloseListener {
+public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
-	private SearchView search;
 	private Context _context;
 	private List<Quay> quaysList;
 	private List<Quay> origQuaysList;
@@ -153,20 +150,5 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements 
 			}
 		}
 		notifyDataSetChanged();
-	}
-
-	@Override
-	public boolean onClose() {
-		return false;
-	}
-
-	@Override
-	public boolean onQueryTextChange(String newText) {
-		return false;
-	}
-
-	@Override
-	public boolean onQueryTextSubmit(String query) {
-		return false;
 	}
 }

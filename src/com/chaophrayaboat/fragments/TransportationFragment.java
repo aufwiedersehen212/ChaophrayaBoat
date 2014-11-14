@@ -4,6 +4,7 @@ import java.util.List;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.SearchView;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -17,10 +18,12 @@ import com.chaophrayaboat.models.Quay;
 import com.chaophrayaboat.models.QuayManager;
 
 public class TransportationFragment extends Fragment {
+
 	@SuppressWarnings("unused")
 	private static final String TAG = "TransportationFragment";
 	private ExpandableListView expandableListView;
 	private ExpandableListAdapter adapter;
+	private SearchView search;
 
 	public void onResume() {
 		super.onResume();
@@ -42,6 +45,7 @@ public class TransportationFragment extends Fragment {
 
 	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
 		inflater.inflate(R.menu.menu_search, menu);
+		search = (SearchView) menu.findItem(R.id.action_search).getActionView();
 		super.onCreateOptionsMenu(menu, inflater);
 	}
 

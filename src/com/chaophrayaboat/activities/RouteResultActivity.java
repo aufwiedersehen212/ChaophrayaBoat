@@ -56,15 +56,15 @@ public class RouteResultActivity extends ActionBarActivity implements OnMarkerCl
 				String destinationStr = intent.getStringExtra(RouteFragment.EXTRA_DESTINATION);
 				mDestination = gson.fromJson(destinationStr, Quay.class);
 
-				Marker startMaker = mMap.addMarker(new MarkerOptions().position(mStart.getLatLng())
-						.title(mStart.nameEn).snippet(mStart.getSnippet())
+				mMap.addMarker(new MarkerOptions().position(mStart.getLatLng()).title(mStart.nameEn)
+						.snippet(mStart.getSnippet())
 						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
 				// startMaker.showInfoWindow();
 				Log.i(TAG, "Start " + mStart.nameEn);
 				Log.i(TAG, "Start " + mStart.getLatLng());
 
-				Marker destinationMarker = mMap.addMarker(new MarkerOptions().position(mDestination.getLatLng())
-						.title(mDestination.nameEn).snippet(mDestination.getSnippet()));
+				mMap.addMarker(new MarkerOptions().position(mDestination.getLatLng()).title(mDestination.nameEn)
+						.snippet(mDestination.getSnippet()));
 				// destinationMarker.showInfoWindow();
 				Log.i(TAG, "Destination " + mDestination.nameEn);
 				Log.i(TAG, "Destination " + mDestination.getLatLng());

@@ -22,7 +22,6 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 public class RouteFragment extends Fragment implements OnClickListener {
-	private static final String TAG = "RouteFragment";
 	private View rootView;
 	private Spinner startSpinner;
 	private Spinner destinationSpinner;

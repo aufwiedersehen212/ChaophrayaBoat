@@ -23,6 +23,7 @@ public class TransportationFragment extends Fragment {
 	private static final String TAG = "TransportationFragment";
 	private ExpandableListView expandableListView;
 	private ExpandableListAdapter adapter;
+	@SuppressWarnings("unused")
 	private SearchView search;
 
 	@Override

@@ -68,6 +68,36 @@ public class QuayManager {
 		}
 		return lls.toArray(new LatLng[0]);
 	}
+
+	public static Quay[] getQuayPoints(Context context, String startId, String endId) {
+		List<Quay> qys = getQuaysList(context);
+		List<Quay> qyls = new ArrayList<Quay>();
+		
+		int start = 0;
+		int end = 0;
+		for (int i = 0; i < qys.size(); i++) {
+			Quay q = qys.get(i);
+			if (q.id.equals(startId)) {
+				Log.i(TAG + " START", i + "");
+				start = i;
+			}
+			if (q.id.equals(endId)) {
+				Log.i(TAG + " END", i + "");
+				end = i;
+			}
+		}
+		if (start < end) {
+			for (int i = start; i <= end; i++) {
+				qyls.add(qys.get(i));
+			}
+		} else {
+			for (int i = end; i <= start; i++) {
+				qyls.add(qys.get(i));
+			}
+		}
+		return qyls.toArray(new Quay[0]);
+	}
+	
 	public static String loadJSONFromAsset(Context context) {
 		String json = null;
 		try {

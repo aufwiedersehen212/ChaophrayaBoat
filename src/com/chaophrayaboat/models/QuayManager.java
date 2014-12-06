@@ -40,7 +40,28 @@ public class QuayManager {
 		Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES).create();
 		return (gson).fromJson(loadJSONFromAsset(context), Quay[].class);
 	}
+	
+	public static String[] getQuayNames(Context context) {
+		List<String> names = new ArrayList<String>();
 
+		List<Quay> qys = getQuaysList(context);
+		for (Quay q : qys) {
+			names.add(q.nameTh);
+			names.add(q.nameEn);
+		}
+		return names.toArray(new String[0]);
+	}
+	public static Quay getQuayWithName(Context context,String name) {
+
+		List<Quay> qys = getQuaysList(context);
+		for (Quay q : qys) {
+			if(q.nameEn.equals(name) || q.nameTh.equals(name)){
+				return q;
+			}
+		}
+		return null;
+	}
+	
 	public static LatLng[] getPolylinePoints(Context context, String startId, String endId) {
 		List<LatLng> lls = new ArrayList<LatLng>();
 		List<Quay> qys = getQuaysList(context);
@@ -68,6 +89,36 @@ public class QuayManager {
 		}
 		return lls.toArray(new LatLng[0]);
 	}
+
+	public static Quay[] getQuayPoints(Context context, String startId, String endId) {
+		List<Quay> qys = getQuaysList(context);
+		List<Quay> qyls = new ArrayList<Quay>();
+		
+		int start = 0;
+		int end = 0;
+		for (int i = 0; i < qys.size(); i++) {
+			Quay q = qys.get(i);
+			if (q.id.equals(startId)) {
+				Log.i(TAG + " START", i + "");
+				start = i;
+			}
+			if (q.id.equals(endId)) {
+				Log.i(TAG + " END", i + "");
+				end = i;
+			}
+		}
+		if (start < end) {
+			for (int i = start; i <= end; i++) {
+				qyls.add(qys.get(i));
+			}
+		} else {
+			for (int i = end; i <= start; i++) {
+				qyls.add(qys.get(i));
+			}
+		}
+		return qyls.toArray(new Quay[0]);
+	}
+	
 	public static String loadJSONFromAsset(Context context) {
 		String json = null;
 		try {

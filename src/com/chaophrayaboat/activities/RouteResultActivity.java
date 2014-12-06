@@ -11,7 +11,6 @@ import android.view.MenuItem;
 import com.chaophrayaboat.R;
 import com.chaophrayaboat.adapters.PopupAdapter;
 import com.chaophrayaboat.fragments.RouteFragment;
-import com.chaophrayaboat.models.AreaManager;
 import com.chaophrayaboat.models.Quay;
 import com.chaophrayaboat.models.QuayManager;
 import com.google.android.gms.maps.CameraUpdateFactory;
